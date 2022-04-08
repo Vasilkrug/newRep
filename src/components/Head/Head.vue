@@ -1,79 +1,65 @@
 <template>
   <header class="header">
-    <div class="pers-acc">
-      <a href="#">{{ persAcc }}</a>
+    <div class="head-item">
+      <a href="mailto:username@someemail.com">username@someemail.com</a>
+      <MyButton style="background: white; color:#229ED9">Выйти</MyButton>
     </div>
-    <div v-show="isLogin" class="email-info">
-      <a href="#">{{ email }}</a>
-      <button @click="loginLogout" class="btn">Выйти</button>
-    </div>
-    <button class="btn-loin" @click="loginLogout" v-show="!isLogin">Войти</button>
+
   </header>
 </template>
 
 <script>
+import MyButton from "@/UI/MyButton/MyButton";
 export default {
   // eslint-disable-next-line vue/multi-word-component-names
   name: "Head",
-  components: {},
-  data() {
-    return {
-      persAcc: 'Личный кабинет',
-      email: 'username@someemail.com',
-      isLogin: true,
-    }
-  },
-  methods: {
-    loginLogout() {
-      this.isLogin = !this.isLogin
-    },
-  }
+  components: {MyButton}
 }
 </script>
 
 <style scoped>
 .header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
   height: 100px;
+  max-width: 1440px;
   background: #229ED9;
-  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
 }
-
-header a {
+.head-item {
+  display: flex;
+  margin-right: 40px;
+  padding: 15px;
+  align-items: center;
+}
+.head-item a {
+  position: relative;
+  margin-right: 25px;
   text-decoration: none;
   color: white;
   font-size: 18px;
 }
-
-.pers-acc {
-  padding-left: 15px;
-
+.head-item a:hover {
+  color: #FBD784;
+  transition: 0.2s ease-in;
+}
+.head-item a::after {
+  position: absolute;
+  left: 0;
+  bottom: -15px;
+  display: block;
+  content: '';
+  width: 100%;
+  height: 2px;
+  background-color:#FBD784;
+  opacity: 0;
+  transition: all 0.2s ease-in;
+}
+.head-item a:hover::after {
+  bottom: -5px;
+  background-color: #FBD784;
+  opacity: 1;
 }
 
-.email-info {
-  padding: 15px;
-}
 
-.email-info a {
-  padding-right: 20px;
-}
-
-.btn {
-  width: 100px;
-  height: 40px;
-  font-size: 18px;
-  border: none;
-  cursor: pointer;
-}
-
-.btn-loin {
-  width: 100px;
-  height: 40px;
-  font-size: 18px;
-  border: none;
-  cursor: pointer;
-  margin-right: 15px;
-}
 </style>

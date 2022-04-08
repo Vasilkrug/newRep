@@ -1,52 +1,87 @@
 <template>
-  <aside class="sidebar">
-    <div class="nav-item">
-      <ul class="nav-link" v-for="item of links" :key="item">
-        <li><a href="#"><img :src="item.img">{{ item.link }}</a></li>
-      </ul>
-    </div>
-  </aside>
+  <div class="nav">
+    <h4>Личный кабинет</h4>
+    <ul class="nav-list">
+      <li class="nav-item" v-for="link in links" :key="link.name">
+        <router-link :to="link.path"><img :src="link.img"/> {{link.name}}</router-link>
+      </li>
 
+    </ul>
+  </div>
 </template>
 
 <script>
-
 export default {
   name: "SideBar",
-  data() {
+  data(){
     return {
       links: [
-        {link: 'Личный кабинет', img: 'home.png'},
-        {link: 'Каналы', img: 'telegram.png'},
-        {link: 'Настройки', img: 'setting.png'},
+        {path: '/account', name: 'Личный кабинет', img: 'home.png'},
+        {path: '/servers', name: 'Cерверы', img: 'setting.png'},
+        {path: '/settings', name: 'Настройки', img: 'telegram.png'},
       ]
     }
   }
-
 }
 </script>
 
 <style scoped>
-.sidebar {
+.nav {
+  width: 250px;
   background: #229ED9;
-  min-width: 200px;
-  min-height: 100vh;
+  height: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+  padding-top: 40px;
+  color: white;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 29px;
 }
 
-.nav-link li {
-  padding-top: 30px;
-  padding-left: 10px;
-  list-style: none;
+h4 {
+  padding-left: 25px;
 }
 
-.nav-link a {
+.nav-list {
+  margin-top: 40px;
+}
+
+.nav-list a {
+  position: relative;
   text-decoration: none;
   color: white;
-  font-size: 18px;
-
 }
 
-.nav-link img {
-  padding-right: 5px;
+.nav-list a:hover {
+  color: #FBD784;
+  transition: 0.2s ease-in;
+}
+
+.nav-list a::after {
+  position: absolute;
+  left: 0;
+  bottom: -15px;
+  display: block;
+  content: '';
+  width: 100%;
+  height: 2px;
+  background-color: #FBD784;
+  opacity: 0;
+  transition: all 0.2s ease-in;
+}
+
+.nav-list a:hover::after {
+  bottom: -5px;
+  background-color: #FBD784;
+  opacity: 1;
+}
+
+.nav-item {
+  padding-left: 25px;
+  padding-top: 32px;
+
 }
 </style>

@@ -1,0 +1,72 @@
+<template>
+  <div class="settings">
+    <h4>Настройки</h4>
+    <div class="form-block">
+      <form class="form">
+        <label>
+          Почта для уведомлений
+          <input placeholder="Введите Вашу почту"/>
+        </label>
+        <label>
+          Телефон для связи
+          <input class="second-input" placeholder="Введите Ваш телефон"/>
+        </label>
+        <MyButton>Сохранить</MyButton>
+      </form>
+    </div>
+  </div>
+</template>
+
+<script>
+import MyButton from "@/UI/MyButton/MyButton";
+
+export default {
+  // eslint-disable-next-line vue/multi-word-component-names
+  name: "Settings",
+  components: {MyButton}
+}
+</script>
+
+<style scoped>
+.settings {
+  border: 3px solid #229ED9;
+  display: flex;
+  flex-direction: column;
+}
+
+h4 {
+  padding: 15px;
+  color: #229ED9;
+  font-size: 18px;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  padding: 30px;
+}
+
+label {
+  margin-bottom: 50px;
+  color: #229ED9;
+  font-size: 16px;
+}
+
+input {
+  height: 40px;
+  width: 380px;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  padding-left: 10px;
+  border: none;
+  outline-color: #229ED9;
+  margin-left: 30px;
+}
+.second-input {
+  margin-left: 65px;
+}
+
+input::placeholder {
+  color: #229ED9;
+  font-size: 18px;
+}
+</style>
