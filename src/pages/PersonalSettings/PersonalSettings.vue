@@ -21,8 +21,7 @@
 import MyButton from "@/UI/MyButton/MyButton";
 
 export default {
-  // eslint-disable-next-line vue/multi-word-component-names
-  name: "Settings",
+  name: "PersonalSettings",
   components: {MyButton}
 }
 </script>
@@ -38,6 +37,7 @@ h4 {
   padding: 15px;
   color: #229ED9;
   font-size: 18px;
+  margin: 10px;
 }
 
 .form {
@@ -61,6 +61,7 @@ input {
   outline-color: #229ED9;
   margin-left: 30px;
 }
+
 .second-input {
   margin-left: 65px;
 }

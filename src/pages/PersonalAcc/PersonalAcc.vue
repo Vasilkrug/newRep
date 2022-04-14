@@ -3,7 +3,9 @@
     <h4>Подключенные серверы</h4>
     <table class="table">
       <tbody>
-      <tr class="personal-acc-block" v-for="item in serverInfo" :key="item.id">
+      <tr class="personal-acc-block"
+          v-for="item in serverInfo"
+          :key="item.id">
         <td>id:{{ item.id }}</td>
         <td>{{ item.method }}</td>
         <td :class="changeColor(item.status)">{{ item.status }}</td>
@@ -24,16 +26,10 @@ import MyButton from "@/UI/MyButton/MyButton";
 export default {
   name: "PersonalAcc",
   components: {MyButton},
-  data() {
-    return {}
-  },
   props: {
     serverInfo: Array,
-    changeColor:Function
+    changeColor: Function
   },
-  methods: {
-
-  }
 }
 </script>
 
@@ -63,9 +59,11 @@ h4 {
 .green {
   color: green;
 }
+
 .yellow {
   color: yellow;
 }
+
 .red {
   color: red;
 }

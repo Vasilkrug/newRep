@@ -1,35 +1,25 @@
 <template>
   <div id="app">
-    <div class="head">
-      <Header/>
-    </div>
-    <side-bar>
-    </side-bar>
+    <SiteHead/>
+    <SideBar/>
     <div class="content">
-      <router-view :serverInfo="serverInfo"
-                   :changeColor="changeColor"
-      ></router-view>
+      <router-view
+          :serverInfo="serverInfo"
+          :changeColor="changeColor"
+      />
     </div>
   </div>
 </template>
 
 <script>
-
-
-import Header from "@/components/Head/Head";
+import SiteHead from "@/components/SiteHead/SiteHead";
 import SideBar from "@/components/Sidebar/SideBar";
-// import PersonalAcc from "@/pages/PersonalAcc/PersonalAcc";
-// import Servers from "@/pages/Servers/Servers";
-// import Settings from "@/pages/Settings/Settings";
 
 export default {
   name: 'App',
   components: {
-    // PersonalAcc,
-    // Servers,
-    // Settings,
     SideBar,
-    Header,
+    SiteHead,
   },
   data() {
     return {
@@ -44,7 +34,6 @@ export default {
         {id: 201, method: 'Api', status: 'Активен', ip: '135.181.162.244', date: new Date().toLocaleDateString()},
         {id: 241, method: 'Core', status: 'Отключен', ip: '135.181.162.244', date: new Date().toLocaleDateString()},
         {id: 297, method: 'Notify', status: 'Активен', ip: '135.181.162.244', date: new Date().toLocaleDateString()},
-
       ]
     }
   },

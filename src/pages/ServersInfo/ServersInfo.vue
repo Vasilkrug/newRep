@@ -1,6 +1,8 @@
 <template>
   <div class="servers">
-        <div class="servers-list" v-for="server in serverInfo" :key="server.id">
+        <div class="servers-list"
+             v-for="server in serverInfo"
+             :key="server.id">
           <p>{{server.id}}</p>
           <p>{{ server.method }}</p>
           <p :class="changeColor(server.status)">{{server.status}}</p>
@@ -15,19 +17,12 @@
 import MyButton from "@/UI/MyButton/MyButton";
 
 export default {
-  // eslint-disable-next-line vue/multi-word-component-names
-  name: "Servers",
+  name: "ServersInfo",
   components: {MyButton},
-  data() {
-    return {
-
-    }
-  },
   props: {
     serverInfo:Array,
     changeColor:Function
   },
-
 }
 </script>
 

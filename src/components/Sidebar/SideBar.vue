@@ -1,25 +1,33 @@
 <template>
   <div class="nav">
-    <h4>Личный кабинет</h4>
+    <h4>{{ activeLink }}</h4>
     <ul class="nav-list">
-      <li class="nav-item" v-for="link in links" :key="link.name">
-        <router-link :to="link.path"><img :src="link.img"/> {{link.name}}</router-link>
+      <li @click="activePage" class="nav-item"
+          v-for="link in links"
+          :key="link.name">
+        <router-link :to="link.path">
+          <img :src="link.img"/> {{ link.name }}
+        </router-link>
       </li>
-
     </ul>
   </div>
 </template>
 
 <script>
+import {routes} from "@/router";
+
+console.log(routes)
 export default {
   name: "SideBar",
-  data(){
+  data() {
     return {
-      links: [
-        {path: '/account', name: 'Личный кабинет', img: 'home.png'},
-        {path: '/servers', name: 'Cерверы', img: 'setting.png'},
-        {path: '/settings', name: 'Настройки', img: 'telegram.png'},
-      ]
+      links:routes,
+      activeLink:'Личный кабинет'
+    }
+  },
+  methods:{
+    activePage(event){
+      this.activeLink = event.target.textContent;
     }
   }
 }
