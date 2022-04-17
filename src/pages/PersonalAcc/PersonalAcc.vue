@@ -12,7 +12,7 @@
         <td>{{ item.ip }}</td>
         <td>{{ item.date }}</td>
         <td>
-          <MyButton>Подробнее</MyButton>
+          <MyButton style="background-color: #182137">Подробнее</MyButton>
         </td>
       </tr>
       </tbody>
@@ -35,11 +35,11 @@ export default {
 
 <style scoped>
 .personal-acc {
-  border: 3px solid #229ED9;
+  border: 3px solid #182137;
 }
 
 h4 {
-  color: #229ED9;
+  color: #182137;
   font-size: 18px;
   margin: 25px;
 }
@@ -47,7 +47,7 @@ h4 {
 .personal-acc-block {
   height: 90px;
   margin-bottom: 30px;
-  color: #229ED9;
+  color: #182137;
   font-size: 18px;
 }
 
@@ -61,7 +61,7 @@ h4 {
 }
 
 .yellow {
-  color: yellow;
+  color: #FBD784;
 }
 
 .red {

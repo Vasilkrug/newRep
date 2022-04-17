@@ -2,7 +2,7 @@
   <header class="header">
     <div class="head-item">
       <a href="mailto:username@someemail.com">username@someemail.com</a>
-      <MyButton style="background: white; color:#229ED9">Выйти</MyButton>
+      <MyButton style="background: white; color:#182137">Выйти</MyButton>
     </div>
   </header>
 </template>
@@ -19,7 +19,7 @@ export default {
 <style scoped>
 .header {
   height: 100px;
-  background: #229ED9;
+  background: #182137;
   display: flex;
   justify-content: flex-end;
   align-items: center;

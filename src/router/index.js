@@ -4,9 +4,9 @@ import ServersInfo from "@/pages/ServersInfo/ServersInfo";
 import PersonalSettings from "@/pages/PersonalSettings/PersonalSettings";
 
 export const routes = [
-    {path: '/account', name: 'Личный кабинет', component: PersonalAcc, meta: {title: 'Личный кабинет'}, img: 'home.png'},
-    {path: '/servers', name: 'Cерверы', component: ServersInfo, meta: {title: 'Cерверы'}, img: 'setting.png'},
-    {path: '/settings', name: 'Настройки', component: PersonalSettings, meta: {title: 'Настройки'}, img: 'telegram.png'},
+    {path: '/account', name: 'Личный кабинет', component: PersonalAcc, meta: {title: 'Личный кабинет'}, img: 'account.png'},
+    {path: '/servers', name: 'Cерверы', component: ServersInfo, meta: {title: 'Cерверы'}, img: 'server.svg'},
+    {path: '/settings', name: 'Настройки', component: PersonalSettings, meta: {title: 'Настройки'}, img: 'settings.svg'},
 ];
 
 const router = createRouter({

@@ -21,14 +21,21 @@ export default {
   name: "SideBar",
   data() {
     return {
-      links:routes,
-      activeLink:'Личный кабинет'
+      links: routes,
+      activeLink: 'Личный кабинет'
     }
   },
-  methods:{
-    activePage(event){
+  methods: {
+    activePage(event) {
       this.activeLink = event.target.textContent;
+      localStorage.setItem('page', this.activeLink)
+    },
+    localActivePage() {
+      this.activeLink = localStorage.getItem('page')
     }
+  },
+  mounted() {
+    this.localActivePage()
   }
 }
 </script>
@@ -36,7 +43,7 @@ export default {
 <style scoped>
 .nav {
   width: 250px;
-  background: #229ED9;
+  background: #182137;
   height: 100%;
   position: absolute;
   left: 0;
@@ -61,6 +68,7 @@ h4 {
   position: relative;
   text-decoration: none;
   color: white;
+  font-weight: 600;
 }
 
 .nav-list a:hover {
@@ -90,6 +98,11 @@ h4 {
 .nav-item {
   padding-left: 25px;
   padding-top: 32px;
+}
 
+.nav-item img {
+  width: 20px;
+  height: 20px;
+  margin-right: 15px;
 }
 </style>

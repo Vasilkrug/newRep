@@ -11,7 +11,7 @@
           Телефон для связи
           <input class="second-input" placeholder="Введите Ваш телефон"/>
         </label>
-        <MyButton>Сохранить</MyButton>
+        <MyButton style="background-color: #182137">Сохранить</MyButton>
       </form>
     </div>
   </div>
@@ -28,14 +28,14 @@ export default {
 
 <style scoped>
 .settings {
-  border: 3px solid #229ED9;
+  border: 3px solid #182137;
   display: flex;
   flex-direction: column;
 }
 
 h4 {
   padding: 15px;
-  color: #229ED9;
+  color: #182137;
   font-size: 18px;
   margin: 10px;
 }
@@ -48,7 +48,7 @@ h4 {
 
 label {
   margin-bottom: 50px;
-  color: #229ED9;
+  color: #182137;
   font-size: 16px;
 }
 
@@ -58,7 +58,7 @@ input {
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
   padding-left: 10px;
   border: none;
-  outline-color: #229ED9;
+  outline-color: #182137;
   margin-left: 30px;
 }
 
@@ -67,7 +67,7 @@ input {
 }
 
 input::placeholder {
-  color: #229ED9;
+  color: #182137;
   font-size: 18px;
 }
 </style>
