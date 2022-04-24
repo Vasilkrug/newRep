@@ -5,7 +5,7 @@
       <li @click="activePage" class="nav-item"
           v-for="link in links"
           :key="link.name">
-        <router-link :to="link.path">
+        <router-link :to="link.url">
           <img :src="link.img"/> {{ link.name }}
         </router-link>
       </li>
@@ -14,14 +14,13 @@
 </template>
 
 <script>
-import {routes} from "@/router";
+import {links} from "@/servers/servers";
 
-console.log(routes)
 export default {
   name: "SideBar",
   data() {
     return {
-      links: routes,
+      links,
       activeLink: 'Личный кабинет'
     }
   },
@@ -34,6 +33,7 @@ export default {
       this.activeLink = localStorage.getItem('page')
     }
   },
+
   mounted() {
     this.localActivePage()
   }

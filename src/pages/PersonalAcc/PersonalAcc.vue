@@ -6,7 +6,7 @@
       <tr class="personal-acc-block"
           v-for="item in serverInfo"
           :key="item.id">
-        <td>id:{{ item.id }}</td>
+        <td>{{ item.id }}</td>
         <td>{{ item.method }}</td>
         <td :class="changeColor(item.status)">{{ item.status }}</td>
         <td>{{ item.ip }}</td>

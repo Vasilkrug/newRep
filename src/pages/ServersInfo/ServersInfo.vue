@@ -8,7 +8,9 @@
       <p :class="changeColor(server.status)">{{ server.status }}</p>
       <p>{{ server.ip }}</p>
       <p>{{ server.date }}</p>
-      <MyButton style="background-color: #182137">Подробнее</MyButton>
+      <router-link :to="`${server.id}`">
+        <MyButton style="background-color: #182137">Подробнее</MyButton>
+      </router-link>
     </div>
   </div>
 </template>

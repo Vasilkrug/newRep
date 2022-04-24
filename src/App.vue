@@ -14,6 +14,7 @@
 <script>
 import SiteHead from "@/components/SiteHead/SiteHead";
 import SideBar from "@/components/Sidebar/SideBar";
+import {servers} from "@/servers/servers"
 
 export default {
   name: 'App',
@@ -23,18 +24,7 @@ export default {
   },
   data() {
     return {
-      serverInfo: [
-        {
-          id: 104,
-          method: 'Cabinet',
-          status: 'В ожидании',
-          ip: '135.181.162.244',
-          date: new Date().toLocaleDateString()
-        },
-        {id: 201, method: 'Api', status: 'Активен', ip: '135.181.162.244', date: new Date().toLocaleDateString()},
-        {id: 241, method: 'Core', status: 'Отключен', ip: '135.181.162.244', date: new Date().toLocaleDateString()},
-        {id: 297, method: 'Notify', status: 'Активен', ip: '135.181.162.244', date: new Date().toLocaleDateString()},
-      ]
+      serverInfo:servers
     }
   },
   methods: {
