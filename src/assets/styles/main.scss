@@ -1,0 +1,45 @@
+//fonts
+@import "../fonts/ComicSans/stylesheet";
+//components
+@import "sideBar";
+@import "siteHead";
+//pages
+@import "serversList";
+@import "personalSettings";
+@import "personalAcc";
+@import "serverCard";
+//UI
+@import "myModal";
+@import "MyButton";
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Comic Sans MS', sans-serif;
+  font-weight: normal;
+}
+html {
+  height: 100%;
+}
+body {
+  min-height: 100%;
+}
+#app{
+  min-height: 100%;
+}
+.slide-fade-enter-active {
+  transition: all 2s ease-in-out;
+}
+.slide-fade-leave-active {
+  transition: all .5s cubic-bezier(1.0, 0.5, 0.8, 1.0);
+}
+.slide-fade-enter, .slide-fade-leave-active {
+  padding-left: 10px;
+  opacity: 0;
+}
+.content {
+  max-width: 1100px;
+  margin-left: 280px;
+  margin-top: 40px;
+}

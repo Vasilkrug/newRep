@@ -1,0 +1,22 @@
+.servers-list {
+  display: flex;
+  border: 3px solid #182137;
+  margin-bottom: 20px;
+  padding-left: 30px;
+  justify-content: space-around;
+  height: 70px;
+  align-items: center;
+  color: #182137;
+  -webkit-transition: 0.2s ease;
+  p {
+    min-width: 100px;
+    font-size: 17px;
+  }
+}
+.servers-list:hover {
+  transform: translateY(-10px) translateX(10px);
+  transition: box-shadow .2s ease, transform .2s ease;
+  -webkit-box-shadow: -6px 6px 0 1px;
+  -moz-box-shadow: -6px 6px 0 1px;
+  box-shadow: -6px 6px 0 1px;
+}

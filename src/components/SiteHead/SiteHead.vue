@@ -1,68 +1,30 @@
 <template>
   <header class="header">
+    <h4 v-if="activeLink">{{ activeLink }}</h4>
+    <h4 v-else>Главная</h4>
     <div class="head-item">
       <a href="mailto:username@someemail.com">username@someemail.com</a>
-      <MyButton style="background: white; color:#182137">Выйти</MyButton>
+      <MyButton style="background: white; color:#182137">
+        Выйти
+      </MyButton>
     </div>
   </header>
 </template>
 
 <script>
 import MyButton from "@/UI/MyButton/MyButton";
+import {mapState} from 'vuex'
 
 export default {
   name: "SiteHead",
-  components: {MyButton}
+  components: {MyButton},
+  computed: {
+    ...mapState({
+      activeLink: 'activeLink'
+    })
+  },
 }
 </script>
 
-<style scoped>
-.header {
-  height: 100px;
-  background: #182137;
-  display: flex;
-  justify-content: flex-end;
-  align-items: center;
-}
-
-.head-item {
-  display: flex;
-  margin-right: 40px;
-  padding: 15px;
-  align-items: center;
-}
-
-.head-item a {
-  position: relative;
-  margin-right: 25px;
-  text-decoration: none;
-  color: white;
-  font-size: 18px;
-}
-
-.head-item a:hover {
-  color: #FBD784;
-  transition: 0.2s ease-in;
-}
-
-.head-item a::after {
-  position: absolute;
-  left: 0;
-  bottom: -15px;
-  display: block;
-  content: '';
-  width: 100%;
-  height: 2px;
-  background-color: #FBD784;
-  opacity: 0;
-  transition: all 0.2s ease-in;
-}
-
-.head-item a:hover::after {
-  bottom: -5px;
-  background-color: #FBD784;
-  opacity: 1;
-}
-
-
+<style lang="scss" scoped>
 </style>

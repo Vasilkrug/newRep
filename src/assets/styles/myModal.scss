@@ -1,0 +1,40 @@
+.modal-enter-active,
+.modal-leave-active {
+  transition: opacity 0.5s ease;
+}
+.modal-enter-from,
+.modal-leave-to {
+  opacity: 0;
+}
+.modal-window {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 1000;
+  background: rgba(0, 0, 0, 0.8);
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  overflow-y: scroll;
+  padding: 60px 15px;
+  .modal-content {
+    width: 100%;
+    max-width: 500px;
+    padding: 50px;
+    background: #f9f9f9;
+    border-radius: 3px;
+    position: relative;
+    box-shadow: 0 5px 15px black;
+  }
+  .modal-title {
+    text-align: center;
+    font-size: 22px;
+  }
+  .modal-btns{
+    margin-top: 50px;
+    display: flex;
+    justify-content: space-around;
+  }
+}

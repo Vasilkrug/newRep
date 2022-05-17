@@ -1,0 +1,25 @@
+
+@font-face {
+    font-family: 'Comic Sans MS';
+    src: url('~@/assets/fonts/ComicSans/ComicSansMS.eot');
+    src: local('Comic Sans MS'), local('ComicSansMS'),
+        url('~@/assets/fonts/ComicSans/ComicSansMS.eot?#iefix') format('embedded-opentype'),
+        url('~@/assets/fonts/ComicSans/ComicSansMS.woff2') format('woff2'),
+        url('~@/assets/fonts/ComicSans/ComicSansMS.woff') format('woff'),
+        url('~@/assets/fonts/ComicSans/ComicSansMS.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Comic Sans MS';
+    src: url('~@/assets/fonts/ComicSans/ComicSansMS-Bold.eot');
+    src: local('Comic Sans MS Bold'), local('ComicSansMS-Bold'),
+        url('~@/assets/fonts/ComicSans/ComicSansMS-Bold.eot?#iefix') format('embedded-opentype'),
+        url('~@/assets/fonts/ComicSans/ComicSansMS-Bold.woff2') format('woff2'),
+        url('~@/assets/fonts/ComicSans/ComicSansMS-Bold.woff') format('woff'),
+        url('~@/assets/fonts/ComicSans/ComicSansMS-Bold.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+}
+
